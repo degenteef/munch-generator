@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #ebf6f5, #d2ebe9, #b9e1de, #9fd6d3, #84cbc8, #7fcad1, #7ec8da, #82c5e1, #afc9ed, #d5ceee, #eed7e9, #fbe3e8);
+}
+
+.meme-generator {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2rem; /* Responsive font size */
+  color: #5d4037;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 0 10px;
+  font-size: 1.5em; /* Increased font size */
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.preview {
+  width: 90%; /* Makes it responsive */
+  max-width: 500px; /* Sets a maximum width */
+  height: 500px;
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.preview img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+  gap: 15px;
+  margin-top: 2rem; /* Adjusted for better spacing */
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem; /* Responsive font size */
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 180px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+#download {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#download:hover {
+  background-color: #43A047;
+}
+
+#randomize {
+  background-color: #2196F3;
+  color: white;
+}
+
+#randomize:hover {
+  background-color: #1E88E5;
+}
+
+#reset {
+  background-color: #FF5252;
+  color: white;
+}
+
+#reset:hover {
+  background-color: #E53935;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  margin: 20px 0;
+  justify-items: center;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 400px; /* Sets a maximum width */
+  margin: auto; /* Centers the container */
+}
+
+.scroll-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em; /* Adjusted for responsiveness */
+  color: #5d4037;
+}
+
+.scrollable {
+  display: flex;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  width: 100%; /* Full width */
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #fbe9e7;
+  transition: box-shadow 0.3s ease;
+}
+
+.select-image {
+  width: 80px;
+  height: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.select-image:hover,
+.select-image.active {
+  border-color: #795548;
+  transform: scale(1.05);
+}
+
+.scroll-btn {
+  background-color: #9df9ef;
+  color: black;
+  font-size: 20px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  margin: 0.5rem 0; /* Adjusted for better spacing */
+}
+
+.scroll-btn:hover {
+  background-color: #5d4037;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  h3 {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .scroll-btn {
+      padding: 8px; /* Smaller buttons on mobile */
+  }
+
+  .button {
+      padding: 8px 16px; /* Smaller buttons on mobile */
+      font-size: 0.9rem; /* Adjust font size */
+  }
+  .preview {
+    max-width: 400px; /* Sets a maximum width */
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+      font-size: 1.2rem; /* Even smaller font for very small screens */
+  }
+
+  .button {
+      padding: 6px 12px; /* Further reduce button size */
+  }
+  .preview {
+    max-width: 300px; /* Sets a maximum width */
+    height: 300px;
+  }
+}
